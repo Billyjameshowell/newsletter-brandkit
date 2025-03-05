@@ -1,0 +1,125 @@
+---
+// Footer component for the landing page
+---
+
+<footer class="footer">
+	<div class="container footer-container">
+		<div class="footer-logo">
+			<a href="/">
+				<span class="logo-text">LocalBrand<span class="accent">AI</span></span>
+			</a>
+			<p class="footer-tagline">AI-powered branding for local newsletters</p>
+		</div>
+		
+		<div class="footer-links">
+			<div class="footer-section">
+				<h3>Product</h3>
+				<ul>
+					<li><a href="#how-it-works">How It Works</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="https://app.yourdomain.tld">Get Started</a></li>
+				</ul>
+			</div>
+			
+			<div class="footer-section">
+				<h3>Company</h3>
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer-bottom">
+		<div class="container">
+			<p>&copy; {new Date().getFullYear()} LocalBrandAI. All rights reserved.</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background-color: var(--dark);
+		color: white;
+		padding-top: 4rem;
+	}
+
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		gap: 4rem;
+		padding-bottom: 3rem;
+	}
+
+	.footer-logo {
+		max-width: 300px;
+	}
+
+	.logo-text {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: white;
+	}
+
+	.accent {
+		color: var(--primary);
+	}
+
+	.footer-tagline {
+		margin-top: 0.75rem;
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 0.875rem;
+	}
+
+	.footer-links {
+		display: flex;
+		gap: 4rem;
+	}
+
+	.footer-section h3 {
+		font-size: 1.125rem;
+		font-weight: 600;
+		margin-bottom: 1.25rem;
+		color: white;
+	}
+
+	.footer-section ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.footer-section li {
+		margin-bottom: 0.75rem;
+	}
+
+	.footer-section a {
+		color: rgba(255, 255, 255, 0.7);
+		transition: color 0.3s ease;
+	}
+
+	.footer-section a:hover {
+		color: white;
+	}
+
+	.footer-bottom {
+		background-color: rgba(0, 0, 0, 0.2);
+		padding: 1.5rem 0;
+		text-align: center;
+		font-size: 0.875rem;
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	@media (max-width: 768px) {
+		.footer-container {
+			flex-direction: column;
+			gap: 2rem;
+		}
+
+		.footer-links {
+			flex-direction: column;
+			gap: 2rem;
+		}
+	}
+</style>

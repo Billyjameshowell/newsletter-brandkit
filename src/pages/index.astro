@@ -1,11 +1,320 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<Header />
+	
+	<main>
+		<!-- Hero Section -->
+		<section id="hero" class="hero-section">
+			<div class="container hero-container">
+				<div class="hero-content">
+					<h1>Transform Your Local Newsletter with AI-Powered Branding</h1>
+					<p>
+						From concept to complete brand kit in minutes. Create professional color palettes, 
+						typography, logos, and more for your local newsletter with our AI branding tool.
+					</p>
+					<div class="cta-buttons">
+						<a href="https://app.yourdomain.tld" class="btn btn-primary">Start Creating Your Brand</a>
+					</div>
+				</div>
+				<div class="hero-image">
+					<img src="/hero-image.png" alt="Newsletter branding showcase" />
+				</div>
+			</div>
+		</section>
+
+		<!-- How It Works Section -->
+		<section id="how-it-works" class="section">
+			<div class="container">
+				<div class="section-header">
+					<h2>How It Works</h2>
+					<p>Create your complete brand kit in just a few simple steps</p>
+				</div>
+				
+				<div class="steps">
+					<div class="step">
+						<div class="step-number">1</div>
+						<h3>Enter Your Brand Statement</h3>
+						<p>Tell us about your newsletter's mission and audience</p>
+					</div>
+					
+					<div class="step">
+						<div class="step-number">2</div>
+						<h3>Specify Location</h3>
+						<p>Enter your city and state to localize your branding</p>
+					</div>
+					
+					<div class="step">
+						<div class="step-number">3</div>
+						<h3>Choose Name & Domain</h3>
+						<p>Select your publication name and domain</p>
+					</div>
+					
+					<div class="step">
+						<div class="step-number">4</div>
+						<h3>Generate Brand Kit</h3>
+						<p>Our AI creates your complete brand identity package</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section id="features" class="section features-section">
+			<div class="container">
+				<div class="section-header">
+					<h2>Everything You Need for Your Local Newsletter</h2>
+					<p>Our AI-powered platform generates a complete brand kit</p>
+				</div>
+				
+				<div class="features">
+					<div class="feature">
+						<div class="feature-icon">🎨</div>
+						<h3>Color Palettes</h3>
+						<p>Professional color schemes that reflect your brand's personality</p>
+					</div>
+					
+					<div class="feature">
+						<div class="feature-icon">🔤</div>
+						<h3>Typography</h3>
+						<p>Font pairings that enhance readability and brand identity</p>
+					</div>
+					
+					<div class="feature">
+						<div class="feature-icon">📝</div>
+						<h3>Logos</h3>
+						<p>Custom logo designs that capture your newsletter's essence</p>
+					</div>
+					
+					<div class="feature">
+						<div class="feature-icon">✨</div>
+						<h3>Favicons & Wordmarks</h3>
+						<p>Complete visual identity for web and print</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section id="cta" class="section cta-section">
+			<div class="container">
+				<div class="cta-content">
+					<h2>Ready to Transform Your Newsletter?</h2>
+					<p>Create your professional brand kit in minutes with our AI-powered tool</p>
+					<a href="https://app.yourdomain.tld" class="btn btn-primary">Get Started Now</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
 </Layout>
+
+<style>
+	.hero-section {
+		padding: 6rem 0;
+		background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
+	}
+
+	.hero-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	.hero-content {
+		max-width: 600px;
+	}
+
+	.hero-content h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 1.5rem;
+		color: var(--dark);
+	}
+
+	.hero-content p {
+		font-size: 1.25rem;
+		line-height: 1.6;
+		color: var(--gray);
+		margin-bottom: 2rem;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.hero-image {
+		max-width: 500px;
+		width: 100%;
+	}
+
+	.hero-image img {
+		width: 100%;
+		border-radius: 0.5rem;
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	}
+
+	.section {
+		padding: 5rem 0;
+	}
+
+	.section-header {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 3rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		color: var(--dark);
+	}
+
+	.section-header p {
+		font-size: 1.25rem;
+		color: var(--gray);
+	}
+
+	.steps {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.step {
+		background-color: white;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		transition: transform 0.3s ease;
+		text-align: center;
+	}
+
+	.step:hover {
+		transform: translateY(-5px);
+	}
+
+	.step-number {
+		width: 3rem;
+		height: 3rem;
+		background-color: var(--primary);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-size: 1.5rem;
+		margin: 0 auto 1.5rem;
+	}
+
+	.step h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		color: var(--dark);
+	}
+
+	.step p {
+		color: var(--gray);
+	}
+
+	.features-section {
+		background-color: #f1f5f9;
+	}
+
+	.features {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.feature {
+		background-color: white;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		transition: transform 0.3s ease;
+		text-align: center;
+	}
+
+	.feature:hover {
+		transform: translateY(-5px);
+	}
+
+	.feature-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.feature h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		color: var(--dark);
+	}
+
+	.feature p {
+		color: var(--gray);
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+		color: white;
+		text-align: center;
+	}
+
+	.cta-content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.cta-content h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.cta-content p {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+	}
+
+	.cta-section .btn-primary {
+		background-color: white;
+		color: var(--primary);
+		font-size: 1.125rem;
+		padding: 0.875rem 2rem;
+	}
+
+	.cta-section .btn-primary:hover {
+		background-color: rgba(255, 255, 255, 0.9);
+		color: var(--primary-dark);
+	}
+
+	@media (max-width: 768px) {
+		.hero-container {
+			flex-direction: column;
+		}
+
+		.hero-content {
+			text-align: center;
+		}
+
+		.hero-content h1 {
+			font-size: 2.5rem;
+		}
+
+		.cta-buttons {
+			justify-content: center;
+		}
+	}
+</style>
