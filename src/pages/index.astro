@@ -18,7 +18,7 @@ import Footer from '../components/Footer.astro';
 						typography, logos, and more for your local newsletter with our AI branding tool.
 					</p>
 					<div class="cta-buttons">
-						<a href="https://app.yourdomain.tld" class="btn btn-primary">Start Creating Your Brand</a>
+						<a href={import.meta.env.PUBLIC_APP_DOMAIN} class="btn btn-primary">Start Creating Your Brand</a>
 					</div>
 				</div>
 				<div class="hero-image">
@@ -105,7 +105,7 @@ import Footer from '../components/Footer.astro';
 				<div class="cta-content">
 					<h2>Ready to Transform Your Newsletter?</h2>
 					<p>Create your professional brand kit in minutes with our AI-powered tool</p>
-					<a href="https://app.yourdomain.tld" class="btn btn-primary">Get Started Now</a>
+					<a href={import.meta.env.PUBLIC_APP_DOMAIN} class="btn btn-primary">Get Started Now</a>
 				</div>
 			</div>
 		</section>
